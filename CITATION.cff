@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use Weil Bounds Toolkit, please cite the software version and the relevant historical mathematical sources."
+title: "Weil Bounds Toolkit"
+type: software
+authors:
+  - given-names: Charlie
+    family-names: Dorsey
+    affiliation: Raccoon Labs
+version: "0.1.0"
+repository-code: "https://github.com/charliedorsey/weil-bounds-toolkit"
+license: Apache-2.0
+keywords:
+  - Lean 4
+  - formal proof
+  - Kloosterman sums
+  - Weil bound
+abstract: "Lean 4 formalization of the classical prime Kloosterman-Weil bound, its Carlitz-Stepanov proof, and specified CRT and interval-completion consequences."

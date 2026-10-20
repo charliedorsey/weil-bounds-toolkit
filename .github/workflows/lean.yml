@@ -1,0 +1,25 @@
+name: Lean verification
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Verify SHA-256 manifest and source closure
+        run: python3 docs/verify.py
+      - name: Install pinned Lean toolchain
+        uses: leanprover/lean-action@24581d74d674803a25a81b10b059c5c0cdd344c6 # v1
+        with:
+          build: false
+      - name: Fetch pinned Mathlib cache
+        run: lake exe cache get
+      - name: Compile all RML sources
+        run: lake build
+      - name: Compile public consumer examples
+        run: lake env lean examples/Use.lean
+      - name: Check public theorem axioms
+        run: python3 docs/check_axioms.py
