@@ -1,6 +1,10 @@
-import rml.stepanov.parameters
-import rml.stepanov.curve_count
-import Mathlib.FieldTheory.Separable
+module
+
+public import rml.stepanov.parameters
+public import rml.stepanov.curve_count
+public import Mathlib.FieldTheory.Separable
+
+@[expose] public section
 
 /-!
 # Square-root point-count estimates

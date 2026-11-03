@@ -1,4 +1,8 @@
-import rml.carlitz.recurrence_package
+module
+
+public import rml.carlitz.recurrence_package
+
+@[expose] public section
 
 /-!
 # Finite spectral aggregates

@@ -1,12 +1,16 @@
-import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
-import Mathlib.Algebra.Polynomial.Monic
-import Mathlib.RingTheory.UniqueFactorizationDomain.NormalizedFactors
-import Mathlib.Algebra.Field.ZMod
-import Mathlib.RingTheory.Polynomial.Dickson
-import Mathlib.Algebra.Polynomial.Reverse
-import Mathlib.FieldTheory.Finite.Extension
-import Mathlib.FieldTheory.Minpoly.ConjRootClass
-import Mathlib.RingTheory.Trace.Basic
+module
+
+public import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+public import Mathlib.Algebra.Polynomial.Monic
+public import Mathlib.RingTheory.UniqueFactorizationDomain.NormalizedFactors
+public import Mathlib.Algebra.Field.ZMod
+public import Mathlib.RingTheory.Polynomial.Dickson
+public import Mathlib.Algebra.Polynomial.Reverse
+public import Mathlib.FieldTheory.Finite.Extension
+public import Mathlib.FieldTheory.Minpoly.ConjRootClass
+public import Mathlib.RingTheory.Trace.Basic
+
+@[expose] public section
 
 /-!
 # Finite-field and Dickson-polynomial algebra

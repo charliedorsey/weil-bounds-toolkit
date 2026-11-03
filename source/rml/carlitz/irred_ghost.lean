@@ -1,4 +1,8 @@
-import rml.carlitz.relevant_irred
+module
+
+public import rml.carlitz.relevant_irred
+
+@[expose] public section
 
 /-!
 # Irreducible-class ghost sums

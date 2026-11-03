@@ -1,6 +1,10 @@
-import rml.stepanov.specialized_curve
-import rml.stepanov.artin_schreier
-import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+module
+
+public import rml.stepanov.specialized_curve
+public import rml.stepanov.artin_schreier
+public import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+
+@[expose] public section
 
 /-!
 # Trace parametrization of the Kloosterman curve

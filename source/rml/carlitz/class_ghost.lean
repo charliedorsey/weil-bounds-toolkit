@@ -1,6 +1,10 @@
-import rml.carlitz.class_value
-import rml.carlitz.conj_decomp
-import Mathlib.FieldTheory.Separable
+module
+
+public import rml.carlitz.class_value
+public import rml.carlitz.conj_decomp
+public import Mathlib.FieldTheory.Separable
+
+@[expose] public section
 
 /-!
 # Conjugacy-class ghost sums

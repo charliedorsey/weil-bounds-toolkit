@@ -1,7 +1,12 @@
-import rml.stepanov.algebra
-import Mathlib.RingTheory.Polynomial.DegreeLT
-import Mathlib.FieldTheory.Finite.Basic
-import Mathlib.RingTheory.UniqueFactorizationDomain.Multiplicity
+module
+
+public import rml.stepanov.algebra
+public import Mathlib.RingTheory.Polynomial.DegreeLT
+public import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
+public import Mathlib.FieldTheory.Finite.Basic
+public import Mathlib.RingTheory.UniqueFactorizationDomain.Multiplicity
+
+@[expose] public section
 
 /-!
 # Auxiliary-polynomial coefficient space

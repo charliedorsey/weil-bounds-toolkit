@@ -1,5 +1,9 @@
-import rml.stepanov.prime_weil
-import rml.weil.prime_foundation
+module
+
+public import rml.stepanov.prime_weil
+public import rml.weil.prime_foundation
+
+@[expose] public section
 
 /-!
 # Prime-bound normalization

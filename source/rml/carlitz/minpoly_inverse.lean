@@ -1,8 +1,12 @@
-import rml.carlitz.extension_defs
-import Mathlib.Algebra.Polynomial.Div
-import Mathlib.Algebra.Polynomial.RingDivision
-import Mathlib.Algebra.Polynomial.Reverse
-import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+module
+
+public import rml.carlitz.extension_defs
+public import Mathlib.Algebra.Polynomial.Div
+public import Mathlib.Algebra.Polynomial.RingDivision
+public import Mathlib.Algebra.Polynomial.Reverse
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+
+@[expose] public section
 
 /-!
 # Minimal polynomials and inverse sums

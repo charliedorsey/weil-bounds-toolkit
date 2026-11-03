@@ -1,4 +1,8 @@
-import rml.carlitz.generating_identity
+module
+
+public import rml.carlitz.generating_identity
+
+@[expose] public section
 
 /-!
 # The Carlitz spectral recurrence

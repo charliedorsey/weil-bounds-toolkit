@@ -1,4 +1,8 @@
-import rml.carlitz.factor_data
+module
+
+public import rml.carlitz.factor_data
+
+@[expose] public section
 
 /-!
 # Coefficients of monic polynomials

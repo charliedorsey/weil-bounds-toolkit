@@ -1,6 +1,6 @@
 name = "weil_bounds_toolkit"
 version = "0.1.0"
-defaultTargets = ["rml"]
+defaultTargets = ["rml", "Challenge", "Solution"]
 
 [[lean_lib]]
 name = "rml"
@@ -10,4 +10,12 @@ globs = ["rml.*"]
 [[require]]
 name = "mathlib"
 git = "https://github.com/leanprover-community/mathlib4.git"
-rev = "v4.34.0"
+rev = "v4.35.0-rc2"
+
+[[lean_lib]]
+name = "Challenge"
+roots = ["Challenge"]
+
+[[lean_lib]]
+name = "Solution"
+roots = ["Solution"]

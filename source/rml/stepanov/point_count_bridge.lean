@@ -1,5 +1,9 @@
-import rml.stepanov.finite_sum
-import rml.stepanov.scalar_kext
+module
+
+public import rml.stepanov.finite_sum
+public import rml.stepanov.scalar_kext
+
+@[expose] public section
 
 /-!
 # From point counts to spectral sums

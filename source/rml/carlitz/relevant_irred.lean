@@ -1,6 +1,10 @@
-import rml.carlitz.class_ghost
-import Mathlib.FieldTheory.Finite.Extension
-import Mathlib.Algebra.Polynomial.Splits
+module
+
+public import rml.carlitz.class_ghost
+public import Mathlib.FieldTheory.Finite.Extension
+public import Mathlib.Algebra.Polynomial.Splits
+
+@[expose] public section
 
 /-!
 # Irreducibles in the generating identity

@@ -1,4 +1,8 @@
-import rml.weil
+module
+
+public import rml.weil
+
+@[expose] public section
 
 /-!
 # Unconditional bounds derived from the prime theorem

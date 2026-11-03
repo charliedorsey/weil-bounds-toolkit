@@ -1,5 +1,9 @@
-import rml.stepanov.defect
-import Mathlib.FieldTheory.Finite.GaloisField
+module
+
+public import rml.stepanov.defect
+public import Mathlib.FieldTheory.Finite.GaloisField
+
+@[expose] public section
 
 /-!
 # The Artin–Schreier Kloosterman curve

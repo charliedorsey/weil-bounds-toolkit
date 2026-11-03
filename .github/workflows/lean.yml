@@ -11,6 +11,8 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Verify SHA-256 manifest and source closure
         run: python3 docs/verify.py
+      - name: Check Palomar source requirements
+        run: python3 scripts/check-lean-sources.py
       - name: Install pinned Lean toolchain
         uses: leanprover/lean-action@24581d74d674803a25a81b10b059c5c0cdd344c6 # v1
         with:

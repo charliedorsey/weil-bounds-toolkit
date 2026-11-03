@@ -1,5 +1,9 @@
-import rml.carlitz.extension_defs
-import Mathlib.FieldTheory.Minpoly.ConjRootClass
+module
+
+public import rml.carlitz.extension_defs
+public import Mathlib.FieldTheory.Minpoly.ConjRootClass
+
+@[expose] public section
 
 /-!
 # Conjugate decomposition

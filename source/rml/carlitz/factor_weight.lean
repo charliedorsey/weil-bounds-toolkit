@@ -1,4 +1,8 @@
-import rml.carlitz.coeff_equiv
+module
+
+public import rml.carlitz.coeff_equiv
+
+@[expose] public section
 
 /-!
 # Multiplicative polynomial weights

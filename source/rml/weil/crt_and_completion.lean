@@ -1,4 +1,8 @@
-import rml.weil.prime_kloosterman
+module
+
+public import rml.weil.prime_kloosterman
+
+@[expose] public section
 
 /-!
 # CRT factorization and Fourier completion

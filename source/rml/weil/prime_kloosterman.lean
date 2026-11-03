@@ -1,4 +1,8 @@
-import rml.stepanov.prime_weil_bridge
+module
+
+public import rml.stepanov.prime_weil_bridge
+
+@[expose] public section
 
 /-!
 # The public prime estimate

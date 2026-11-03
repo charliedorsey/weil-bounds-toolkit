@@ -1,4 +1,8 @@
-import rml.weil.contracts
+module
+
+public import rml.weil.contracts
+
+@[expose] public section
 
 /-! # Boundary checks for the exported estimates -/
 namespace RML.ExpSum.Weil

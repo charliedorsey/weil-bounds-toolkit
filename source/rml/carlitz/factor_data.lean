@@ -1,8 +1,12 @@
-import rml.carlitz.dickson_finite_algebra
-import Mathlib.Algebra.Polynomial.BigOperators
-import Mathlib.Algebra.Polynomial.Div
-import Mathlib.Algebra.Polynomial.FieldDivision
-import Mathlib.RingTheory.UniqueFactorizationDomain.NormalizedFactors
+module
+
+public import rml.carlitz.dickson_finite_algebra
+public import Mathlib.Algebra.Polynomial.BigOperators
+public import Mathlib.Algebra.Polynomial.Div
+public import Mathlib.Algebra.Polynomial.FieldDivision
+public import Mathlib.RingTheory.UniqueFactorizationDomain.NormalizedFactors
+
+@[expose] public section
 
 /-!
 # Monic factorization data

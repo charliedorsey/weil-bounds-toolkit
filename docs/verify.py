@@ -63,7 +63,7 @@ for p in lean_files:
     if re.search(r'(?m)^\s*(?:open|export)\s+(?:[A-Z][\w]*\.){2,}[A-Z]',text):
         # External opens remain permitted; namespace identity is checked above.
         pass
-    for importname in re.findall(r'(?m)^import\s+([^\s]+)',text):
+    for importname in re.findall(r'(?m)^(?:public\s+)?import\s+([^\s]+)',text):
         if importname.startswith('rml.') and importname not in mods:
             sys.exit('FAIL: unshipped source import: '+importname+' from '+rel)
     if re.search(r'(?m)^\s*(sorry|admit|axiom|constant|opaque|unsafe|native_decide)\b', text):

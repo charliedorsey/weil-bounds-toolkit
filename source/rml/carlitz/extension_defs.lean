@@ -1,7 +1,11 @@
-import rml.weil.prime_foundation
-import Mathlib.FieldTheory.Finite.GaloisField
-import Mathlib.RingTheory.Trace.Basic
-import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+module
+
+public import rml.weil.prime_foundation
+public import Mathlib.FieldTheory.Finite.GaloisField
+public import Mathlib.RingTheory.Trace.Basic
+public import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+
+@[expose] public section
 
 /-!
 # Extension-field Kloosterman sums

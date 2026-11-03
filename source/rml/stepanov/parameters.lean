@@ -1,6 +1,10 @@
-import rml.stepanov.auxiliary
-import Mathlib.Algebra.Order.Floor.Div
-import Mathlib.Data.Nat.Sqrt
+module
+
+public import rml.stepanov.auxiliary
+public import Mathlib.Algebra.Order.Floor.Div
+public import Mathlib.Data.Nat.Sqrt
+
+@[expose] public section
 
 /-!
 # Uniform Stepanov parameters

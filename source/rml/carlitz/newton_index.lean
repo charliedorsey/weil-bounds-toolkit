@@ -1,6 +1,10 @@
-import rml.carlitz.factor_weight
-import rml.carlitz.irred_ghost
-import Mathlib.Data.Multiset.Replicate
+module
+
+public import rml.carlitz.factor_weight
+public import rml.carlitz.irred_ghost
+public import Mathlib.Data.Multiset.Replicate
+
+@[expose] public section
 
 /-!
 # Indexing Newton sums

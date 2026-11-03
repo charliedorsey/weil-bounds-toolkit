@@ -1,7 +1,11 @@
-import rml.stepanov.specialized_curve
-import rml.stepanov.point_count_bridge
-import rml.stepanov.carlitz_roots
-import rml.stepanov.power_sum_spectral
+module
+
+public import rml.stepanov.specialized_curve
+public import rml.stepanov.point_count_bridge
+public import rml.stepanov.carlitz_roots
+public import rml.stepanov.power_sum_spectral
+
+@[expose] public section
 
 /-!
 # From point counts to the spectral circle

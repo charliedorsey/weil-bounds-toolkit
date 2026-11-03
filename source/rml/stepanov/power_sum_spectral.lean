@@ -1,8 +1,12 @@
-import Mathlib.Analysis.Polynomial.CauchyBound
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Algebra.BigOperators.Field
-import Mathlib.RingTheory.MvPolynomial.Symmetric.NewtonIdentities
-import Mathlib.RingTheory.Polynomial.Vieta
+module
+
+public import Mathlib.Analysis.Polynomial.CauchyBound
+public import Mathlib.Analysis.Complex.Basic
+public import Mathlib.Algebra.BigOperators.Field
+public import Mathlib.RingTheory.MvPolynomial.Symmetric.NewtonIdentities
+public import Mathlib.RingTheory.Polynomial.Vieta
+
+@[expose] public section
 
 /-!
 # Spectral estimates from power sums

@@ -1,4 +1,8 @@
-import rml
+module
+
+public import rml
+
+@[expose] public section
 
 /-!
 # Weil Bounds Toolkit: compiled consumers

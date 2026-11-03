@@ -1,7 +1,11 @@
-import Mathlib.Algebra.Polynomial.Div
-import Mathlib.Algebra.Polynomial.Roots
-import Mathlib.Algebra.Polynomial.Taylor
-import Mathlib.Data.Nat.Choose.Lucas
+module
+
+public import Mathlib.Algebra.Polynomial.Div
+public import Mathlib.Algebra.Polynomial.Roots
+public import Mathlib.Algebra.Polynomial.Taylor
+public import Mathlib.Data.Nat.Choose.Lucas
+
+@[expose] public section
 
 /-!
 # Hasse derivatives and multiplicities

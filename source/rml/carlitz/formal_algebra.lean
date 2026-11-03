@@ -1,6 +1,10 @@
-import Mathlib.RingTheory.PowerSeries.Log
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.Complex.Polynomial.Basic
+module
+
+public import Mathlib.RingTheory.PowerSeries.Log
+public import Mathlib.Analysis.Complex.Basic
+public import Mathlib.Analysis.Complex.Polynomial.Basic
+
+@[expose] public section
 
 /-!
 # Formal generating-series algebra

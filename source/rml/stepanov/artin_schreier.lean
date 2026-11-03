@@ -1,5 +1,9 @@
-import rml.stepanov.specialized_curve
-import Mathlib.FieldTheory.Finite.Trace
+module
+
+public import rml.stepanov.specialized_curve
+public import Mathlib.FieldTheory.Finite.Trace
+
+@[expose] public section
 
 /-!
 # Trace fibers for the Kloosterman curve

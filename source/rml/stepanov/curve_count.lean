@@ -1,5 +1,9 @@
-import rml.stepanov.algebra
-import Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic
+module
+
+public import rml.stepanov.algebra
+public import Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic
+
+@[expose] public section
 
 /-!
 # Counting points on a hyperelliptic curve

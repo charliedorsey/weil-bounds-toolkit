@@ -1,4 +1,8 @@
-import rml.carlitz.newton_index
+module
+
+public import rml.carlitz.newton_index
+
+@[expose] public section
 
 /-!
 # Newton sums for the recurrence

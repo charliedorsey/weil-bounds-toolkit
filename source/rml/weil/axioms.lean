@@ -1,4 +1,8 @@
-import rml.weil.contracts
+module
+
+public import rml.weil.contracts
+
+@[expose] public section
 
 /-! # Axiom audit for the principal theorem and its consequences -/
 

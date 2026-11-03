@@ -1,5 +1,9 @@
-import rml.stepanov.curve_trace
-import rml.carlitz.extension_defs
+module
+
+public import rml.stepanov.curve_trace
+public import rml.carlitz.extension_defs
+
+@[expose] public section
 
 /-!
 # Extension-field sums and trace scaling

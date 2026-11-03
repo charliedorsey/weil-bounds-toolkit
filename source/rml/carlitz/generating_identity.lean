@@ -1,5 +1,9 @@
-import rml.carlitz.newton_sum
-import rml.carlitz.formal_algebra
+module
+
+public import rml.carlitz.newton_sum
+public import rml.carlitz.formal_algebra
+
+@[expose] public section
 
 /-!
 # Extension-field generating identity

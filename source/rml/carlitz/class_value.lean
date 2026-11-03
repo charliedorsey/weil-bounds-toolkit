@@ -1,6 +1,10 @@
-import rml.carlitz.dickson_finite_algebra
-import rml.carlitz.extension_defs
-import rml.carlitz.minpoly_inverse
+module
+
+public import rml.carlitz.dickson_finite_algebra
+public import rml.carlitz.extension_defs
+public import rml.carlitz.minpoly_inverse
+
+@[expose] public section
 
 /-!
 # Trace characters of polynomial classes
@@ -64,15 +68,9 @@ theorem psiExt_carlitz_arg_eq_etaPoly_pow
   rw [trace_carlitz_arg t hx]
   unfold RML.ExpSum.Dickson.etaPoly
   rw [dif_neg hc]
-  simpa [nsmul_eq_mul] using
-    (AddChar.map_nsmul_eq_pow
-      ZMod.stdAddChar
-      (Module.finrank
-        (IntermediateField.adjoin (Fp p) ({x} : Set (Ext p n)))
-        (Ext p n))
-      (-(minpoly (Fp p) x).nextCoeff -
-        t * ((minpoly (Fp p) x).coeff 1 /
-          (minpoly (Fp p) x).coeff 0)))
+  rw [← AddChar.map_nsmul_eq_pow]
+  congr 1
+  simp only [nsmul_eq_mul]
 
 #print axioms psiExt_carlitz_arg_eq_etaPoly_pow
 

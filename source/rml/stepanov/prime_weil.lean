@@ -1,5 +1,9 @@
-import rml.stepanov.spectral_bound
-import rml.weil.prime_foundation
+module
+
+public import rml.stepanov.spectral_bound
+public import rml.weil.prime_foundation
+
+@[expose] public section
 
 /-!
 # The prime Kloosterman bound
@@ -124,7 +128,8 @@ theorem oneParameterPrimeWeil_two
       intro x hx
       by_cases h0 : x = 0
       · simp [h0]
-      · simp [h0]
+      · simp only [if_neg h0, ZMod.stdAddChar_apply, Circle.norm_coe]
+        exact le_refl 1
     _ = 2 := by norm_num [ZMod.card]
     _ ≤ 2 * Real.sqrt 2 := by
       nlinarith [Real.sq_sqrt (by norm_num : (0 : ℝ) ≤ 2),

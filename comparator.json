@@ -1,0 +1,22 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "RML.ExpSum.Weil.prime_bound",
+    "RML.ExpSum.Weil.weil1948_bound",
+    "RML.ExpSum.Weil.kloostermanSumPrime_eq_weilKloostermanPrime",
+    "RML.ExpSum.Weil.kloostermanUnitSum_crt",
+    "RML.ExpSum.Weil.squarefreeUnitNumerator_bound",
+    "RML.ExpSum.Weil.reducedModulus_pos",
+    "RML.ExpSum.Weil.reducedModulusSum_bound",
+    "RML.ExpSum.Weil.centeredReducedIntervalSum_bound",
+    "RML.ExpSum.Weil.weightedCenteredReducedIntervalSum_bound"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

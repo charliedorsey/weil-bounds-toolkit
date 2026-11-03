@@ -45,7 +45,7 @@ Its complete sum is exactly zero, eliminating the zero Fourier mode. The interva
 
 ## Build and verify
 
-The project pins Lean 4.34.0 and Mathlib in `lean-toolchain` and `lake-manifest.json`.
+The project pins Lean 4.35.0-rc2 and Mathlib in `lean-toolchain` and `lake-manifest.json`.
 
 ```sh
 python3 docs/verify.py
@@ -56,6 +56,26 @@ python3 docs/check_axioms.py
 ```
 
 The first command checks file hashes and source layout. The cache step downloads precompiled Mathlib artifacts. `lake build` checks all distributed `rml` modules, while the next command checks the [worked Lean consumers](examples/Use.lean). The last command audits the axioms of eleven selected declarations. The same sequence is configured in [GitHub Actions](.github/workflows/lean.yml).
+
+## Palomar statement surface
+
+The repository is laid out for the [Palomar registry](https://palomar-registry.org/how-to-submit):
+
+| File | Role |
+| --- | --- |
+| `Challenge.lean` | The audited statement surface. It imports only Mathlib and restates every compared definition and theorem; each definition body and statement is copied verbatim from `source/rml/weil/`, with proofs replaced by `sorry`. |
+| `Solution.lean` | Imports the complete toolkit, where each compared declaration is proved under the same name. |
+| `comparator.json` | The nine compared theorems: `prime_bound`, `weil1948_bound`, `kloostermanSumPrime_eq_weilKloostermanPrime`, `kloostermanUnitSum_crt`, `squarefreeUnitNumerator_bound`, `reducedModulus_pos`, `reducedModulusSum_bound`, `centeredReducedIntervalSum_bound`, `weightedCenteredReducedIntervalSum_bound`. Definitions are compared through the declaration closure and must be identical. |
+| `formalization.yaml` | Registry metadata: sources, scope, fidelity, AI role and review status. |
+
+To check the source requirements and run Comparator locally the way Palomar does:
+
+```sh
+python3 scripts/check-lean-sources.py
+./scripts/verify-comparator.sh   # requires bwrap and a v4.35.0-rc2+ toolchain
+```
+
+Both scripts are copied from the Palomar starter template (Apache-2.0).
 
 ## Use in Lean
 
