@@ -1,46 +1,31 @@
 {
-  "schema": "weil.bounds.release.verification.v3",
-  "toolkit_version": "0.1.0",
-  "package_date": "2026-10-19",
+  "schema": "weil.bounds.release.verification.v4",
+  "record_kind": "current source and historical-evidence crosswalk",
+  "source_commit_palomar_verified": "0f3e4c3010bb0e7c4e514ddb5bd3a0a0e082bf68",
   "repository": "https://github.com/charliedorsey/weil-bounds-toolkit",
-  "distribution": "PUBLIC_SOURCE_RELEASE_READY_FOR_AUTHOR_UPLOAD",
-  "formal_source": {
-    "library_files": 40,
-    "consumer_example_files": 1,
-    "lean_source_set_sha256": "ddb1be5d0dc3818b6eebeb35538b61383b27c01c32adc142e37126cd5c3583b3",
-    "source_set_fingerprint_method": "SHA-256 over concatenated sorted lines SHA256(file bytes) + two spaces + relative POSIX path + LF, for source/**/*.lean and examples/Use.lean",
-    "source_evidence": "All 41 Lean files, lean-toolchain, lakefile.toml, lake-manifest.json and CI workflow are byte-for-byte identical to the independently compiled 2026-10-19 source archive",
-    "pinned_lean": "leanprover/lean4:v4.34.0",
-    "pinned_mathlib_commit": "5ed2965256430c3649e86755f9576b54eca72435"
+  "toolkit_version": "0.1.0",
+  "current_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "current_mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "current_evidence": {
+    "kind": "Palomar production mechanical verification",
+    "palomar_submission_id": "r689f7cz8a4o",
+    "workflow_url": "https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/41562922170",
+    "workflow_outcome": "success",
+    "compared_theorems": 9,
+    "editorial_blocking_problems_identified": false,
+    "editorial_nonblocking_warning": "Stale documentation in verified commit; this corrective documentation is later and cannot retroactively modify the immutable verification review"
   },
-  "independent_compile_and_axiom_evidence": {
-    "compiled_exact_source_archive_sha256": "3c523070dfda1160549355bfa29f3cb82393a8a980775d7ca2cedad818fabba6",
-    "reviewer": "Brannoc; isolated pinned Mac source replay",
-    "certification_date_utc": "2026-10-19T20:35:21.235156+00:00",
-    "lake_build": "PASS (8,964 jobs; Lean 4.34.0)",
-    "consumer_example": "PASS (lake env lean examples/Use.lean)",
-    "selected_axiom_declarations": 11,
-    "selected_axiom_audit": "PASS",
-    "allowed_axioms_only": [
-      "propext",
-      "Classical.choice",
-      "Quot.sound"
-    ],
-    "complete_logs": "Retained in the separate private certification evidence, not bundled with the public source release"
+  "historical_baseline": {
+    "file": "docs/history/release_verification_20261019.json",
+    "file_sha256": "c923a4308e8d6c5d083a64e64e6cb57d8e7a9cbc3854d8c682d93587634741c9",
+    "historical_toolchain": "leanprover/lean4:v4.34.0",
+    "historical_mathlib_commit": "5ed2965256430c3649e86755f9576b54eca72435",
+    "status": "historical source and compiler evidence only; the old source-identity claim does not apply to the 4.35.0-rc2 submitted commit"
   },
-  "final_package_checks": {
-    "integrity_manifest": "SHA256SUMS contains every distributable file except itself; python3 docs/verify.py validates the set",
-    "source_vs_compiled": "byte-identical; packaging changes are documentation/CITATION.cff/SHA256SUMS only",
-    "new_full_lean_compilation_on_this_repackaged_archive": "NOT RUN: Lean toolchain unavailable in packaging environment; GitHub Actions will independently recheck on first push",
-    "hosted_github_actions_status": "NOT YET OBSERVED"
-  },
-  "scope_cautions": [
-    "Prime bound uses nonzero coefficients and a separately proved characteristic-two case",
-    "CRT coefficients are Bezout-normalized and must not be silently simplified",
-    "Squarefree bound requires the first coefficient to be a unit; it is not a general gcd-sensitive composite bound",
-    "Reduced-modulus theorem bounds a sum defined at the reduced modulus, not an original-to-reduced lifting identity",
-    "Arbitrary-length incomplete-sum bounds apply to the mean-centered reciprocal phase, not the uncentered function",
-    "Exact Carlitz (1969) sign/trace normalization has not been compared equation-by-equation against the printed article",
-    "A successful Lean build certifies the formal statements under their displayed hypotheses, not novelty or historical source identity"
-  ]
+  "post_verification_docs_correction": {
+    "proof_source_changed": false,
+    "manifest_pin_changed": false,
+    "this_commit_independently_palomar_verified": false,
+    "explanation": "Docs-only correction, leaving the submitted and verified source commit immutable."
+  }
 }
